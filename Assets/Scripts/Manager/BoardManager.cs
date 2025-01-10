@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
+    public static BoardManager instance;
     [SerializeField] private Transform tilePrefab;
     private int height = 12;
     private int width = 12;
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         SetGameGrid();

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 568472300721329754}
+  - component: {fileID: 225087015730395846}
   m_Layer: 0
   m_Name: GRBO
   m_TagString: Untagged
@@ -35,6 +36,18 @@ Transform:
   - {fileID: 5639647442092500275}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225087015730395846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567859216224255104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ae589b5d568496e8f9e640df23fd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101471825246293544
 GameObject:
   m_ObjectHideFlags: 0
