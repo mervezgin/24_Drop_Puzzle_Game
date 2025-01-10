@@ -3,7 +3,7 @@ using UnityEngine;
 public class BoardManager : MonoBehaviour
 {
     [SerializeField] private Transform tilePrefab;
-    private int height = 14;
+    private int height = 12;
     private int width = 12;
     private void Start()
     {

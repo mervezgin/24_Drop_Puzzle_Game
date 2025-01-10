@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3476379e8ba29423da95067ed6811381
+guid: 2ba20ec06c06443058cdd285c0494999
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4619774357136144821
-    second: "Ads\u0131z tasar\u0131m-5_0"
+      213: 6796441435020691863
+    second: "Ads\u0131z tasar\u0131m-6_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Ads\u0131z tasar\u0131m-5_0"
+      name: "Ads\u0131z tasar\u0131m-6_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 490
-        height: 490
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b460174e2b343efb0800000000000000
-      internalID: -4619774357136144821
+      spriteID: 799872fd97fc15e50800000000000000
+      internalID: 6796441435020691863
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Ads\u0131z tasar\u0131m-5_0": -4619774357136144821
+      "Ads\u0131z tasar\u0131m-6_0": 6796441435020691863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
