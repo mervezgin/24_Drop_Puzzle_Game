@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16cfa4a72c0054cb881bfa6da101fdad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveTimeForShapes: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,11 +641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allShapes:
-  - {fileID: 4682817135919638167, guid: b86ee7149f3b7483a8d16d296deb2d60, type: 3}
-  - {fileID: 2197598004489181008, guid: 94c583313ddad48759dfe0c16f9875bc, type: 3}
-  - {fileID: 256218379339257388, guid: 395c060e6a5954aa785dda1e6b91dd05, type: 3}
-  - {fileID: 663949990778481261, guid: c5f8d15ef760445e39439b196c049712, type: 3}
   - {fileID: 3147042045893861676, guid: 7bcb1c810acb1417180245f204a7261e, type: 3}
+  - {fileID: -7281342129720328276, guid: 941fd0c20ff6e4d3abdd5c8998227960, type: 3}
   - {fileID: 4783497197499415601, guid: 2ee5621ef1b074a17a7eb25b70988cd6, type: 3}
   - {fileID: 3356535142770138948, guid: d490cc0540e0541a59e4c7aaa512f207, type: 3}
   - {fileID: 349475559002351053, guid: def92b42c06a14f1bb5596536e85e6f8, type: 3}
@@ -662,6 +660,7 @@ MonoBehaviour:
   - {fileID: 8648587554506100121, guid: 8fe6e55e6251444f09268978a8486317, type: 3}
   - {fileID: 3105532716737782568, guid: ea4c49d23a5a749ac9587153a138d0b3, type: 3}
   - {fileID: 4154547275843631965, guid: 26b7e67b8b128477f91ad975bdd95caf, type: 3}
+  - {fileID: 6004768265152787220, guid: 3457a915bf07e43d99ddf4f6411daacf, type: 3}
   - {fileID: 4045998957120883825, guid: 2abc6116035494227baf5520d4a99ee2, type: 3}
   - {fileID: 8293065196660227156, guid: b74d30120ad634713afc8258938bcfd4, type: 3}
 --- !u!4 &2030467191
@@ -673,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 2030467189}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 14, z: 0}
+  m_LocalPosition: {x: 3, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

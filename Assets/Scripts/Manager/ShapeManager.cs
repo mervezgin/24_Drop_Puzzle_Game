@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public enum Direction
@@ -5,14 +6,16 @@ public enum Direction
     Left,
     Right,
     Down,
+    Up,
 }
 public class ShapeManager : MonoBehaviour
 {
+    public static ShapeManager instance;
     private void Start()
     {
-        Move(Direction.Down);
+        //StartCoroutine(MoveRoutine());
     }
-    private void Move(Direction direction)
+    public void Move(Direction direction)
     {
         switch (direction)
         {
@@ -25,6 +28,17 @@ public class ShapeManager : MonoBehaviour
             case Direction.Down:
                 transform.Translate(Vector3.down, Space.World);
                 break;
+            case Direction.Up:
+                transform.Translate(Vector3.up, Space.World);
+                break;
         }
     }
+    /*IEnumerator MoveRoutine()
+    {
+        while (true)
+        {
+            Move(Direction.Down);
+            yield return new WaitForSeconds(0.25f);
+        }
+    }*/
 }
