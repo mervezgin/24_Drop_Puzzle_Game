@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16cfa4a72c0054cb881bfa6da101fdad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTimeForShapes: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +269,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 12.5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -295,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 7, z: -10}
+  m_LocalPosition: {x: 3, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -429,7 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6b5bfe98824d8897cf0e43e71b7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 6501757556924112084, guid: 472124b68c7964c6cbdc23b7a38517e7, type: 3}
+  tilePrefab: {fileID: 4740178131803996584, guid: 0bf073417bd2b452895fb6da3e6ff4d0, type: 3}
+  gridHeight: 6
+  gridWidth: 6
 --- !u!1 &1775649583
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,29 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f307c02f5d3c94e1c95c38fa456730f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allShapes:
-  - {fileID: 3147042045893861676, guid: 7bcb1c810acb1417180245f204a7261e, type: 3}
-  - {fileID: -7281342129720328276, guid: 941fd0c20ff6e4d3abdd5c8998227960, type: 3}
-  - {fileID: 4783497197499415601, guid: 2ee5621ef1b074a17a7eb25b70988cd6, type: 3}
-  - {fileID: 3356535142770138948, guid: d490cc0540e0541a59e4c7aaa512f207, type: 3}
-  - {fileID: 349475559002351053, guid: def92b42c06a14f1bb5596536e85e6f8, type: 3}
-  - {fileID: 7368961375404578243, guid: af26775f74738421f88a0b8998dc77c8, type: 3}
-  - {fileID: 8821306861802095224, guid: 8f8f619819db84cdda00d6b8f95c4852, type: 3}
-  - {fileID: 8874157591370481769, guid: e447c5cf08f9748cebb2d2d2fee436b3, type: 3}
-  - {fileID: 7936097569791032551, guid: 1f5649172519f4693a4defb9036c6e88, type: 3}
-  - {fileID: 4496122010418573672, guid: 9f219caa88538414fa2333f7219e77af, type: 3}
-  - {fileID: 225087015730395846, guid: e4214fe8d36564ef98274b7c2eabbb82, type: 3}
-  - {fileID: 1458919382178866485, guid: d1d3ab41e13d648c2b21aa77da8f3ba5, type: 3}
-  - {fileID: 9077069866171288702, guid: dc60f0a8ba18d44c2a4b2fc32ca19b89, type: 3}
-  - {fileID: 3819785204337974761, guid: 014ba01b828944eedb274d5f05721ab5, type: 3}
-  - {fileID: 2252826018409963448, guid: 9e2a80fa52fd442e2bb37464bdbba1ec, type: 3}
-  - {fileID: 6861541434411282613, guid: e9ef98afa300e4c72abf92655b395c17, type: 3}
-  - {fileID: 8648587554506100121, guid: 8fe6e55e6251444f09268978a8486317, type: 3}
-  - {fileID: 3105532716737782568, guid: ea4c49d23a5a749ac9587153a138d0b3, type: 3}
-  - {fileID: 4154547275843631965, guid: 26b7e67b8b128477f91ad975bdd95caf, type: 3}
-  - {fileID: 6004768265152787220, guid: 3457a915bf07e43d99ddf4f6411daacf, type: 3}
-  - {fileID: 4045998957120883825, guid: 2abc6116035494227baf5520d4a99ee2, type: 3}
-  - {fileID: 8293065196660227156, guid: b74d30120ad634713afc8258938bcfd4, type: 3}
+  shape: {fileID: 8627466151398138836, guid: f5f3239d3677f4e55a29c6e033719b6a, type: 3}
 --- !u!4 &2030467191
 Transform:
   m_ObjectHideFlags: 0
@@ -672,7 +651,7 @@ Transform:
   m_GameObject: {fileID: 2030467189}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 13, z: 0}
+  m_LocalPosition: {x: 3, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,22 +4,20 @@ using UnityEngine.Rendering;
 public class SpawnerManager : MonoBehaviour
 {
     public static SpawnerManager instance;
-    [SerializeField] private ShapeManager[] allShapes;
+    [SerializeField] private CreateShape shape;
     private void Awake()
     {
         instance = this;
     }
-    public ShapeManager SetShape()
+    public CreateShape SpawnShape()
     {
-        int randomShape = Random.Range(0, allShapes.Length);
-        ShapeManager shape = Instantiate(allShapes[randomShape], transform.position, Quaternion.identity);
-        return shape;
+        CreateShape spawnShape = Instantiate(shape, transform.position, Quaternion.identity);
+        Debug.Log(transform.position);
+        return spawnShape;
     }
-    /*public ShapeManager SetShapeInBoard()
+    public CreateShape SpawnShapeInGrid(Vector2 pos)
     {
-        //oyun başladığı zaman gridde bazı yerlerde şekiller olsun, level arttıkça şekil sayısı artsın
-        int randomShape = Random.Range(0, allShapes.Length);
-        ShapeManager shape = Instantiate(allShapes[randomShape], buraya gridden random pozisyon gelecek, Quaternion.identity);
-        return shape;
-    }*/
+        CreateShape spawnShapes = Instantiate(shape, pos, Quaternion.identity);
+        return spawnShapes;
+    }
 }
