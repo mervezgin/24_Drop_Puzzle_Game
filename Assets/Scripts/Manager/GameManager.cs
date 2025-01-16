@@ -8,15 +8,18 @@ public class GameManager : MonoBehaviour
     private CreateShape onBoardShapes;
     private float moveDownTimeForShapes = 0.25f;
     private float moveDownCountdown;
-    private float moveDownButtonPressCountdown;
     private float moveDownButtonPressTime = 0.1f;
+    private float moveDownButtonPressCountdown;
     private float moveRightLeftButtonPressTime = 0.1f;
     private float moveLeftRightCountdown;
     private bool isGameActive = true;
     public bool IsGameActive => isGameActive;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
     private void Start()
     {
@@ -25,19 +28,19 @@ public class GameManager : MonoBehaviour
             onScreenShape = SpawnerManager.instance.SpawnShape();
             onScreenShape.transform.position = VectorToInt(onScreenShape.transform.position);
         }
-        if (onBoardShapes == null)
-        {
-            for (int x = 0; x <= 10; x += 2)
-            {
-                for (int y = 0; y <= 2; y += 2)
-                {
-                    Vector2 pos = new Vector2(x, y);
-                    onBoardShapes = SpawnerManager.instance.SpawnShapeInGrid(pos);
-                    onBoardShapes.transform.position = VectorToInt(pos);
-                    BoardManager.instance.SetShapeInToGrid(onBoardShapes);
-                }
-            }
-        }
+        // if (onBoardShapes == null)
+        // {
+        //     for (int x = 0; x <= 5; x += 1)
+        //     {
+        //         for (int y = 0; y <= 0; y += 1)
+        //         {
+        //             Vector2 pos = new Vector2(x, y);
+        //             onBoardShapes = SpawnerManager.instance.SpawnShapeInGrid(pos);
+        //             onBoardShapes.transform.position = VectorToInt(pos);
+        //             BoardManager.instance.SetShapeInToGrid(onBoardShapes);
+        //         }
+        //     }
+        //}
     }
     private void Update()
     {
@@ -90,6 +93,7 @@ public class GameManager : MonoBehaviour
 
         onScreenShape.Move(Direction.Up);
         BoardManager.instance.SetShapeInToGrid(onScreenShape);
+        BoardManager.instance.SetShapeInToGrid(onBoardShapes);
         onScreenShape = SpawnerManager.instance.SpawnShape();
     }
 }

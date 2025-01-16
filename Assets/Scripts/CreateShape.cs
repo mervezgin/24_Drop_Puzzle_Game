@@ -9,20 +9,19 @@ public enum Direction
 }
 public class CreateShape : MonoBehaviour
 {
+    public static CreateShape instance;
     private List<Vector2> allTransformList = new List<Vector2> { new Vector2(0.01f, 0), new Vector2(0.47f, 0), new Vector2(0.01f, 0.46f), new Vector2(0.47f, 0.46f) };
     private Vector2[] allsizes = { new Vector2(1, 1), new Vector2(1, 2), new Vector2(2, 1), new Vector2(2, 2) };
     [SerializeField] List<Transform> allQuarterColorList;
     [SerializeField] private Transform fullQuarter;
     private bool[] occupiedTransforms;
     private bool isValidSize = false;
-
-
     private void Start()
     {
         occupiedTransforms = new bool[allTransformList.Count];
         CreateShapeLast();
     }
-    private void CreateShapeLast()
+    public void CreateShapeLast()
     {
         for (int i = 0; i < allTransformList.Count; i++)
         {
@@ -39,12 +38,16 @@ public class CreateShape : MonoBehaviour
                 randomSize = allsizes[Random.Range(0, allsizes.Length)];
                 isValidSize = CheckIfSizeFits(i, randomSize);
             } while (!isValidSize);
-            Debug.Log(randomSize);
             MarkOccupiedTransforms(i, randomSize);
 
             Transform fullShape = Instantiate(selectedQuarter, allTransformList[i], Quaternion.identity);
             fullShape.localScale = randomSize;
+            foreach (Transform child in fullShape)
+            {
+                child.position = allTransformList[i];
+            }
             if (fullQuarter != null) fullShape.SetParent(fullQuarter);
+            fullShape.localPosition = allTransformList[i];
         }
     }
     private bool CheckIfSizeFits(int startIndex, Vector2 size)
@@ -75,19 +78,12 @@ public class CreateShape : MonoBehaviour
             for (int col = 0; col < cols; col++)
             {
                 int indexToMark = startIndex + row * 2 + col;
-                Debug.Log(indexToMark);
                 if (indexToMark <= allTransformList.Count)
                 {
                     occupiedTransforms[indexToMark] = true;
                 }
             }
         }
-
-    }
-    private static T GetRandomElement<T>(List<T> list)
-    {
-        int randomIndex = Random.Range(0, list.Count);
-        return list[randomIndex];
     }
     public void Move(Direction direction)
     {

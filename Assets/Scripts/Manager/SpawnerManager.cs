@@ -5,14 +5,16 @@ public class SpawnerManager : MonoBehaviour
 {
     public static SpawnerManager instance;
     [SerializeField] private CreateShape shape;
+
     private void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
     public CreateShape SpawnShape()
     {
-        CreateShape spawnShape = Instantiate(shape, transform.position, Quaternion.identity);
-        Debug.Log(transform.position);
+        Vector3 spawnPosition = transform.position;
+        CreateShape spawnShape = Instantiate(shape, spawnPosition, Quaternion.identity);
         return spawnShape;
     }
     public CreateShape SpawnShapeInGrid(Vector2 pos)

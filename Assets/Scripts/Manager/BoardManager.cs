@@ -30,7 +30,7 @@ public class BoardManager : MonoBehaviour
     }
     public bool CheckToShapesInGrid(int x, int y)
     {
-        return x >= 0 && x < gridWidth && y > 0;
+        return x >= 0 && x < gridWidth && y >= 0;
     }
     public bool ShapesAreValidPosition(CreateShape shape)
     {
@@ -62,6 +62,7 @@ public class BoardManager : MonoBehaviour
     }
     public bool IsGridFull(int x, int y, CreateShape shape)
     {
+        Debug.Log(shape + " " + shape.transform);
         return grid[x, y] != null && grid[x, y].parent != shape.transform;
     }
 }
