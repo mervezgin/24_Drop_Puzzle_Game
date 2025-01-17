@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a9da799638a4bdc993dc2073dcc31f, type: 3}
+  m_Name: BlueQuarter
+  m_EditorClassIdentifier: 
+  quarterColor: {r: 0.50980395, g: 0.54901963, b: 0.972549, a: 0}
+  quarterPrefab: {fileID: 8175068738640382350, guid: acba19a75fd2b4c1cb8648a2b9adc7d0, type: 3}
+  prefabName: BlueQuarter

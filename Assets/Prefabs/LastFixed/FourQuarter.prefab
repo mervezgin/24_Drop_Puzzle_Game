@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allQuarterColorList:
-  - {fileID: 8175068738640382350, guid: acba19a75fd2b4c1cb8648a2b9adc7d0, type: 3}
-  - {fileID: 5567200720758129146, guid: 19dd3afac030a496f8ed1922ae9f2601, type: 3}
-  - {fileID: 1935437535454792368, guid: 0da47194ee5db45fb9453aaf57c4b74a, type: 3}
-  - {fileID: 683865287835948665, guid: df47547bea2b54a3a899cc6f90234df5, type: 3}
+  - {fileID: 11400000, guid: 8dd33f81f82544ff19af82b4e3d32116, type: 2}
+  - {fileID: 11400000, guid: fce734e842a3f460eb98774e3a8acecd, type: 2}
+  - {fileID: 11400000, guid: c8b28eb012ce243189bff8bbd57a8579, type: 2}
+  - {fileID: 11400000, guid: 3f7c40851e8ac46dfb59858bca5de5fb, type: 2}
   fullQuarter: {fileID: 6669079741834928855}

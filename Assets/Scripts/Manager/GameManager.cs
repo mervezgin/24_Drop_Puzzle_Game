@@ -28,19 +28,19 @@ public class GameManager : MonoBehaviour
             onScreenShape = SpawnerManager.instance.SpawnShape();
             onScreenShape.transform.position = VectorToInt(onScreenShape.transform.position);
         }
-        // if (onBoardShapes == null)
-        // {
-        //     for (int x = 0; x <= 5; x += 1)
-        //     {
-        //         for (int y = 0; y <= 0; y += 1)
-        //         {
-        //             Vector2 pos = new Vector2(x, y);
-        //             onBoardShapes = SpawnerManager.instance.SpawnShapeInGrid(pos);
-        //             onBoardShapes.transform.position = VectorToInt(pos);
-        //             BoardManager.instance.SetShapeInToGrid(onBoardShapes);
-        //         }
-        //     }
-        //}
+        /* if (onBoardShapes == null)
+         {
+            for (int x = 0; x <= 5; x += 1)
+             {
+                 for (int y = 0; y <= 0; y += 1)
+                 {
+                    Vector2 pos = new Vector2(x, y);
+                    onBoardShapes = SpawnerManager.instance.SpawnShapeInGrid(pos);
+                     onBoardShapes.transform.position = VectorToInt(pos);
+                     BoardManager.instance.SetShapeInToGrid(onBoardShapes);
+                 }
+             }
+        }*/
     }
     private void Update()
     {
@@ -93,8 +93,10 @@ public class GameManager : MonoBehaviour
 
         onScreenShape.Move(Direction.Up);
         BoardManager.instance.SetShapeInToGrid(onScreenShape);
-        BoardManager.instance.SetShapeInToGrid(onBoardShapes);
+
+        BoardManager.instance.CheckMatchingColors(onScreenShape);
         onScreenShape = SpawnerManager.instance.SpawnShape();
     }
 }
+
 

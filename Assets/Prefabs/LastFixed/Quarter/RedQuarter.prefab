@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 683865287835948665}
+  - component: {fileID: 5898016069981320951}
   m_Layer: 0
   m_Name: RedQuarter
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   - {fileID: 3834506697116525063}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5898016069981320951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177271322566661061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6991c3ea1f6e4959894cefb6a204e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quarterObjectSO: {fileID: 11400000, guid: 3f7c40851e8ac46dfb59858bca5de5fb, type: 2}
 --- !u!1 &3517709284138833168
 GameObject:
   m_ObjectHideFlags: 0
